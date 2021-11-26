@@ -1,0 +1,13 @@
+<div class="load-product-button">
+  <button class="ui primary button" (click)="loadProduct()">
+    Load products
+  </button>
+</div>
+<div class="ui grid product-list">
+  <ng-container *ngFor="let product of (products$ | async)">
+    <div class="four wide column">
+      <app-product-card class="four wide column" [product]="product"></app-product-card>
+    </div>
+  </ng-container>
+</div>
+

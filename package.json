@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "start:backend": "nodemon ./backend/index.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,7 +20,9 @@
     "@angular/platform-browser": "~11.0.6",
     "@angular/platform-browser-dynamic": "~11.0.6",
     "@angular/router": "~11.0.6",
+    "express": "^4.17.1",
     "rxjs": "~6.6.0",
+    "semantic-ui-css": "^2.4.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
@@ -37,6 +40,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "nodemon": "^2.0.15",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
